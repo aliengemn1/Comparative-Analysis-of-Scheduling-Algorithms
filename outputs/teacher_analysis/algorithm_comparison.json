@@ -1,0 +1,86 @@
+{
+  "algorithms": [
+    {
+      "name": "Generated",
+      "statistics": {
+        "total_teachers": 500,
+        "teachers_used": 495,
+        "teachers_unused": 5,
+        "average_load": 12.787878787878787,
+        "min_load": 1,
+        "max_load": 24,
+        "std_load": 8.272716172708725,
+        "underloaded_teachers": 311,
+        "overloaded_teachers": 0,
+        "optimal_teachers": 189
+      }
+    }
+  ],
+  "summary_statistics": {
+    "best_utilization": {
+      "name": "Generated",
+      "statistics": {
+        "total_teachers": 500,
+        "teachers_used": 495,
+        "teachers_unused": 5,
+        "average_load": 12.787878787878787,
+        "min_load": 1,
+        "max_load": 24,
+        "std_load": 8.272716172708725,
+        "underloaded_teachers": 311,
+        "overloaded_teachers": 0,
+        "optimal_teachers": 189
+      }
+    },
+    "most_balanced": {
+      "name": "Generated",
+      "statistics": {
+        "total_teachers": 500,
+        "teachers_used": 495,
+        "teachers_unused": 5,
+        "average_load": 12.787878787878787,
+        "min_load": 1,
+        "max_load": 24,
+        "std_load": 8.272716172708725,
+        "underloaded_teachers": 311,
+        "overloaded_teachers": 0,
+        "optimal_teachers": 189
+      }
+    },
+    "fewest_underloaded": {
+      "name": "Generated",
+      "statistics": {
+        "total_teachers": 500,
+        "teachers_used": 495,
+        "teachers_unused": 5,
+        "average_load": 12.787878787878787,
+        "min_load": 1,
+        "max_load": 24,
+        "std_load": 8.272716172708725,
+        "underloaded_teachers": 311,
+        "overloaded_teachers": 0,
+        "optimal_teachers": 189
+      }
+    },
+    "fewest_overloaded": {
+      "name": "Generated",
+      "statistics": {
+        "total_teachers": 500,
+        "teachers_used": 495,
+        "teachers_unused": 5,
+        "average_load": 12.787878787878787,
+        "min_load": 1,
+        "max_load": 24,
+        "std_load": 8.272716172708725,
+        "underloaded_teachers": 311,
+        "overloaded_teachers": 0,
+        "optimal_teachers": 189
+      }
+    }
+  },
+  "recommendations": [
+    "Best teacher utilization: Generated (12.8 periods/teacher)",
+    "Most balanced load distribution: Generated (std: 8.3)",
+    "Generated: 311 teachers are underloaded - consider reassigning periods"
+  ]
+}

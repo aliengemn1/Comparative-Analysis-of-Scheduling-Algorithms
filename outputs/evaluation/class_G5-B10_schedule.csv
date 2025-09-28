@@ -1,0 +1,6 @@
+subject,teacher_id,room_id,day,slot,confidence
+arabic,T291,B-CR-080,Sun,7,0.5
+arabic,T291,B-CR-072,Tue,7,0.5
+arabic,T292,B-CR-073,Tue,7,0.5
+arabic,T294,B-CR-074,Tue,7,0.5
+arabic,T292,B-CR-076,Wed,7,0.5

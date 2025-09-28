@@ -1,0 +1,47 @@
+{
+  "teacher_assignment": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "feature_importance": {
+      "grade": -0.6311110572245101,
+      "grade_priority": -2.0921714389677857,
+      "gender_compatible": -0.11983787081091792,
+      "building_match": -0.15734129952590173,
+      "primary_subject_match": 6.458396902188808,
+      "secondary_subject_capability": 4.420382670403259,
+      "subject_capability": 10.878779572592173,
+      "subject_combination_score": 1.7919693559232515,
+      "teacher_availability": -0.7526115589973973,
+      "daily_class_required": -0.8840371399053979
+    }
+  },
+  "schedule_quality": {
+    "r2_score": 0.003533573418562974,
+    "mse": 0.0001807378115845343,
+    "rmse": 0.013443876360058296,
+    "feature_importance": {
+      "grade": 0.5044354695955207,
+      "total_periods": 0.020916211382822802,
+      "unique_subjects": 0.06038916332614454,
+      "available_teachers": 0.09443912202970185,
+      "available_rooms": 0.049317140550905005,
+      "teacher_utilization": 0.20532880068811293,
+      "room_utilization": 0.06517409242679231
+    }
+  },
+  "constraint_satisfaction": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "feature_importance": {
+      "gender_compatible": 0.43468142050824415,
+      "teacher_available": 0.13736049852112767,
+      "room_type_compatible": 0.4234843062976318,
+      "building_match": 0.0019265529427310076,
+      "primary_subject_match": 0.0025472217302654606
+    }
+  }
+}

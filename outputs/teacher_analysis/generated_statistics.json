@@ -1,0 +1,12 @@
+{
+  "total_teachers": 500,
+  "teachers_used": 495,
+  "teachers_unused": 5,
+  "average_load": 12.787878787878787,
+  "min_load": 1,
+  "max_load": 24,
+  "std_load": 8.272716172708725,
+  "underloaded_teachers": 311,
+  "overloaded_teachers": 0,
+  "optimal_teachers": 189
+}

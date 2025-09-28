@@ -1,0 +1,15 @@
+subject,teacher_id,room_id,day,slot,confidence
+math,T278,B-CR-075,Sun,8,0.5
+math,T278,B-CR-075,Mon,8,0.5
+math,T285,B-CR-076,Mon,8,0.5
+arabic,T040,B-CR-075,Tue,7,0.5
+arabic,T065,B-CR-076,Tue,7,0.5
+math,T278,B-CR-079,Tue,8,0.5
+math,T285,B-CR-080,Tue,8,0.5
+arabic,T040,B-CR-077,Wed,7,0.5
+arabic,T065,B-CR-078,Wed,7,0.5
+arabic,T078,B-CR-079,Wed,7,0.5
+math,T278,B-CR-069,Wed,8,0.5
+math,T285,B-CR-070,Wed,8,0.5
+math,T278,B-CR-067,Thu,8,0.5
+math,T285,B-CR-068,Thu,8,0.5

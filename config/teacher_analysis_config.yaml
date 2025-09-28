@@ -1,0 +1,49 @@
+# Teacher Analysis Configuration
+
+# Analysis Parameters
+analysis:
+  # Percentage of teachers to simulate as absent
+  absent_teacher_percentage: 0.10
+  
+  # Maximum number of substitution suggestions per assignment
+  max_substitution_suggestions: 3
+  
+  # Load status thresholds
+  load_thresholds:
+    underloaded_threshold: 0.8  # Below 80% of min periods
+    overloaded_threshold: 1.1   # Above 120% of max periods
+  
+  # Compatibility scoring weights
+  compatibility_weights:
+    primary_subject_match: 0.4
+    building_match: 0.2
+    load_balance: 0.2
+    availability: 0.2
+
+# Output Configuration
+output:
+  # File formats to generate
+  formats:
+    csv: true
+    json: true
+    excel: false
+  
+  # Include detailed teacher information
+  include_teacher_details: true
+  
+  # Include substitution reasoning
+  include_substitution_reasons: true
+
+# Substitution Rules
+substitution_rules:
+  # Skip suggestions if teacher has more than N daily lessons
+  skip_if_daily_lessons_exceed: 5
+  
+  # Minimum compatibility score for suggestions
+  min_compatibility_score: 0.3
+  
+  # Prefer teachers from same building
+  prefer_same_building: true
+  
+  # Consider load balancing
+  consider_load_balancing: true

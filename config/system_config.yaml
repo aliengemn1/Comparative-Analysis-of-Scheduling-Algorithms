@@ -1,0 +1,232 @@
+# System Configuration for ML-Driven Schedule Generation
+
+# School Configuration
+school:
+  name: "Al-Og School"
+  total_classes: 156   
+  total_teachers: 500
+  total_rooms: 180
+  
+  # Grade Distribution 
+  grades:
+    g1_3:
+      classes_per_grade: 20  # 10 boys + 10 girls per grade
+      sections_per_class: 1
+      building: "A"
+      periods_per_week: 45
+    g4_6:
+      classes_per_grade: 20  # 10 boys + 10 girls per grade
+      sections_per_class: 1
+      building: "A_B"  # Split between A and B
+      periods_per_week: 45
+    g7_9:
+      classes_per_grade: 12  # 6 boys + 6 girls per grade
+      sections_per_class: 1
+      building: "B"
+      periods_per_week: 45
+
+# Room Configuration 
+rooms:
+  classroom_a: 90
+  classroom_b: 80
+  lab_a: 2
+  lab_b: 4
+  playground_a: 3
+  playground_b: 4
+  library_a: 1
+  library_b: 1
+  music_a: 3
+  music_b: 4
+  computers_a: 9
+  computers_b: 8
+  
+# Time Configuration 
+schedule:
+  days_per_week: 5  # Sunday to Thursday
+  slots_per_day: 8  # 8 slots per day 
+  break_slots: [2, 4, 6]  # Breaks after lesson 2, 4, and 6
+  break_duration: 30  # minutes
+  
+# Curriculum Configuration (matching curriculum.csv)
+curriculum:
+  subjects:
+    math: {g1_3: 9, g4_6: 9, g7_9: 9}
+    science: {g1_3: 5, g4_6: 7, g7_9: 7}
+    arabic: {g1_3: 5, g4_6: 5, g7_9: 4}
+    islamic: {g1_3: 6, g4_6: 4, g7_9: 4}
+    pe: {g1_3: 1, g4_6: 1, g7_9: 1}
+    art: {g1_3: 1, g4_6: 1, g7_9: 1}
+    library: {g1_3: 1, g4_6: 1, g7_9: 1}
+    english: {g1_3: 9, g4_6: 9, g7_9: 9}
+    french: {g1_3: 1, g4_6: 1, g7_9: 1}
+    computer: {g1_3: 1, g4_6: 1, g7_9: 1}
+    music: {g1_3: 1, g4_6: 1, g7_9: 1}
+    social: {g1_3: 1, g4_6: 1, g7_9: 1}
+    history: {g1_3: 0, g4_6: 2, g7_9: 2}
+    geography: {g1_3: 0, g4_6: 2, g7_9: 2}
+    chinese: {g1_3: 0, g4_6: 0, g7_9: 1}
+
+# Room Requirements 
+room_requirements:
+  science: {lab_ratio: 1.0, classroom_ratio: 0.0}  # Science requires Lab
+  computer: {computers_ratio: 1.0, classroom_ratio: 0.0}  # Computer requires Lab
+  pe: {playground_ratio: 1.0, classroom_ratio: 0.0}  # PE requires Playground
+  library: {library_ratio: 1.0, classroom_ratio: 0.0}  # Library requires Library room
+  default: {classroom_ratio: 1.0}
+
+# Subject Combination Matrix for Second Subject Teaching
+subject_combinations:
+  # Teachers can teach these subjects as their second subject
+  math_science: 
+    primary_subject: "math"
+    secondary_subject: "science"
+    compatibility_score: 0.8
+    
+  library_pe:
+    primary_subject: "library"
+    secondary_subject: "pe"
+    compatibility_score: 0.7
+    
+  arabic_islamic:
+    primary_subject: "arabic"
+    secondary_subject: "islamic"
+    compatibility_score: 0.9
+    
+  history_geography:
+    primary_subject: "history"
+    secondary_subject: "geography"
+    compatibility_score: 0.9
+    
+  computer_art:
+    primary_subject: "computer"
+    secondary_subject: "art"
+    compatibility_score: 0.7
+
+# Teacher Configuration 
+teachers:
+  total_count: 500
+  gender_distribution: {male: 0.5, female: 0.5}
+  daily_class_required_ratio: 1.0  # All teachers required daily 
+  min_periods_per_week: 18
+  max_periods_per_week: 24
+  specialized_teachers_per_subject:
+    library: 6
+    french: 6
+    pe: 6
+    art: 6
+    computer: 6
+    music: 6
+    chinese: 2
+  # Subject Specialization 
+  subjects:
+    math: {primary: 90, secondary: 10}
+    science: {primary: 60, secondary: 10}
+    arabic: {primary: 70, secondary: 30}
+    islamic: {primary: 60, secondary: 40}
+    pe: {primary: 90, secondary: 10}
+    art: {primary: 90, secondary: 10}
+    library: {primary: 70, secondary: 30}
+    english: {primary: 90, secondary: 10}
+    french: {primary: 90, secondary: 10}
+    computer: {primary: 80, secondary: 20}
+    music: {primary: 90, secondary: 10}
+    social: {primary: 80, secondary: 20}
+    history: {primary: 60, secondary: 40}
+    geography: {primary: 60, secondary: 40}
+    chinese: {primary: 90, secondary: 10}
+    
+# ML Configuration
+ml:
+  # Model Parameters
+  teacher_assignment:
+    model_type: "logistic_regression"
+    test_size: 0.2
+    random_state: 42
+    max_iter: 1000
+    C: 1.0
+    
+  schedule_quality:
+    model_type: "random_forest"
+    n_estimators: 100
+    max_depth: 10
+    test_size: 0.2
+    random_state: 42
+    
+  conflict_resolution:
+    model_type: "xgboost"
+    n_estimators: 100
+    max_depth: 6
+    learning_rate: 0.1
+    test_size: 0.2
+    random_state: 42
+
+# Validation Configuration
+validation:
+  # Hard Constraints
+  hard_constraints:
+    gender_compatibility: true
+    teacher_availability: true
+    room_capacity: true
+    room_type_requirements: true
+    teacher_load_limits: true
+    daily_class_requirement: true
+    
+  # Soft Constraints
+  soft_constraints:
+    home_building_preference: true
+    subject_consistency: true
+    room_consistency: true
+    
+  # Quality Metrics
+  quality_metrics:
+    constraint_violations: true
+    teacher_utilization: true
+    room_utilization: true
+    schedule_balance: true
+
+# Evaluation Configuration
+evaluation:
+  # Comparison Methods
+  comparison_methods:
+    greedy_baseline: true
+    iterative_improvement: true
+    ml_generated: true
+    
+  # Metrics
+  metrics:
+    feasibility: true
+    constraint_satisfaction: true
+    teacher_satisfaction: true
+    schedule_quality: true
+    runtime: true
+    
+  # Output Formats
+  output_formats:
+    csv: true
+    json: true
+    excel: true
+    html_report: true
+
+# File Paths
+paths:
+  data_dir: "outputs/data"
+  features_dir: "outputs/features"
+  models_dir: "outputs/models"
+  schedules_dir: "outputs/schedules"
+  validation_dir: "outputs/validation"
+  evaluation_dir: "outputs/evaluation"
+  
+  # Input Files
+  input_files:
+    classes: "outputs/data/classes.csv"
+    teachers: "outputs/data/teachers.csv"
+    rooms: "outputs/data/rooms.csv"
+    curriculum: "outputs/data/curriculum.csv"
+    teacher_availability: "outputs/data/teacher_availability.csv"
+    
+  # Output Files
+  output_files:
+    schedule: "outputs/schedules/ml_generated_schedule.csv"
+    validation_report: "outputs/validation/validation_report.json"
+    evaluation_report: "outputs/evaluation/evaluation_report.json"
+    quality_metrics: "outputs/evaluation/quality_metrics.csv"

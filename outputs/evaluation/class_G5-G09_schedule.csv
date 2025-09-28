@@ -1,0 +1,10 @@
+subject,teacher_id,room_id,day,slot,confidence
+math,T178,B-CR-078,Sun,8,0.5
+math,T251,B-CR-079,Sun,8,0.5
+math,T178,B-CR-073,Mon,3,0.5
+math,T178,B-CR-080,Mon,8,0.5
+math,T178,B-CR-071,Tue,3,0.5
+math,T178,B-CR-071,Wed,3,0.5
+math,T178,B-CR-063,Thu,3,0.5
+math,T251,B-CR-064,Thu,3,0.5
+math,T178,B-CR-075,Thu,8,0.5
