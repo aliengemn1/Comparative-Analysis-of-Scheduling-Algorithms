@@ -4,17 +4,17 @@
 
 A comprehensive machine learning-driven scheduling system for educational institutions that compares three distinct algorithmic approaches: Machine Learning Generated, Greedy Baseline, and Iterative Improvement algorithms.
 
-## 🎯 Project Overview
+## Project Overview
 
 This project implements a sophisticated multi-stage pipeline for educational scheduling that processes 156 classes across grades 1-9, involving 500 teachers and 15 subjects, generating high-quality assignments with comprehensive constraint satisfaction analysis.
 
-## 📊 Key Results
+## Key Results
 
 - **ML Generated Algorithm**: 82.3% feasibility, 6,330 assignments, 1,628 constraint violations
 - **Iterative Improvement Algorithm**: 75.0% feasibility, 6,654 assignments, 1,900+ constraint violations  
 - **Greedy Baseline Algorithm**: 70.0% feasibility, 6,654 assignments, 2,100+ constraint violations
 
-## 🏗️ System Architecture
+## System Architecture
 
 The system implements a multi-stage pipeline:
 
@@ -30,7 +30,7 @@ Data Generation → Feature Engineering → Model Training → Schedule Generati
 4. **Schedule Generation**: Creates final timetable using trained models with grade-based prioritization
 5. **Validation**: Comprehensive assessment against hard and soft constraints
 
-## 🤖 Machine Learning Models
+## Machine Learning Models
 
 ### 1. Teacher Assignment Model (Random Forest)
 - **Accuracy**: 100%
@@ -47,7 +47,7 @@ Data Generation → Feature Engineering → Model Training → Schedule Generati
 - **Purpose**: Evaluate constraint satisfaction
 - **Key Features**: Gender compatibility, room type compatibility, teacher availability
 
-## 📈 Performance Analysis
+## Performance Analysis
 
 ### Algorithm Comparison
 
@@ -64,7 +64,7 @@ Data Generation → Feature Engineering → Model Training → Schedule Generati
 - **Utilization Paradox**: Teacher utilization shows inverse relationship with constraint satisfaction
 - **Quality Trade-offs**: Quality optimization comes at the cost of teacher load balancing
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 schedule_system/
@@ -89,7 +89,7 @@ schedule_system/
 └── main.py                     # Main execution script
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -136,7 +136,7 @@ python 05_validation/main.py
 python 06_evaluation/main.py
 ```
 
-## 📊 Generated Outputs
+## Generated Outputs
 
 ### Data Files
 - **Classes**: 156 classes across grades 1-9
@@ -167,7 +167,7 @@ python 06_evaluation/main.py
 - **Comparative Analysis Reports**: Detailed algorithm comparisons
 - **Performance Dashboards**: Executive summaries and insights
 
-## 🔧 Configuration
+## Configuration
 
 The system uses YAML configuration files:
 
@@ -180,7 +180,7 @@ Key configuration parameters:
 - ML model parameters
 - Validation criteria
 
-## 📚 Research Contributions
+## Research Contributions
 
 ### Academic Paper
 The project includes a comprehensive academic paper (`outputs/documents/Comprehensive_Academic_Paper.docx`) with:
@@ -201,7 +201,7 @@ The project includes a comprehensive academic paper (`outputs/documents/Comprehe
 4. **Room Efficiency Success**: Excellent room utilization (185/209 rooms used)
 5. **Algorithm Hierarchy**: ML > Iterative > Greedy in overall performance
 
-## 🎯 Use Cases
+## Use Cases
 
 ### Educational Institutions
 - Automated schedule generation for schools and universities
@@ -221,7 +221,7 @@ The project includes a comprehensive academic paper (`outputs/documents/Comprehe
 - Technical reports and evaluations
 - System performance studies
 
-## 🔍 Technical Specifications
+## Technical Specifications
 
 ### System Requirements
 - **Python Version**: 3.8+
@@ -242,7 +242,7 @@ The project includes a comprehensive academic paper (`outputs/documents/Comprehe
 - **Teacher Coverage**: 495/500 teachers
 - **Room Coverage**: 185/209 rooms
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for:
 
@@ -252,18 +252,18 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 - Performance optimizations
 - Documentation improvements
 
-## 📄 License
+## License
 
 This project is open source and available under the MIT License.
 
-## 📞 Contact
+## Contact
 
 For questions, suggestions, or collaboration opportunities, please contact:
 
 - **Repository**: [Comparative-Analysis-of-Scheduling-Algorithms](https://github.com/aliengemn1/Comparative-Analysis-of-Scheduling-Algorithms.git)
 - **Issues**: Use GitHub Issues for bug reports and feature requests
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 This project represents a comprehensive analysis of educational scheduling algorithms, combining machine learning approaches with traditional optimization methods to provide insights into automated educational resource management.
 
